@@ -15,4 +15,7 @@ Route::get('/', function()
 {
 	return View::make('layouts.main');
 });
-Route::controller('jobseeker', 'JobseekerController');
+Route::get('test', function()
+{
+	return View::make('layouts.test');
+});
