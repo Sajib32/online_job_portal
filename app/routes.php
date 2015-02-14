@@ -18,4 +18,15 @@ Route::get('/', function()
 Route::get('test', function()
 {
 	return View::make('layouts.test');
+
 });
+Route::get('testchild', function()
+{
+	return View::make('layouts.testchild');
+});
+
+Route::get('resumes', function()
+{
+	return View::make('jobseekers.resumes');
+});
+

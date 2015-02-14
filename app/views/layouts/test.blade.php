@@ -1,74 +1,85 @@
+<!DOCTYPE html>
 <html>
-<link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css" type="text/css" rel="stylesheet">
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <head>
+        <title>Demo</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{{ URL::asset('css/normalize.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('css/jquery.steps.css') }}">
+        <script src="{{ URL::asset('js/modernizr-2.6.2.min.js') }}"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="{{ URL::asset('js/jquery.cookie-1.3.1.js') }}"></script>
+        <script src="{{ URL::asset('js/jquery.steps.js') }}"></script>
+    </head>
+     <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
 
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.hoverintent/2013.03.11/hoverintent.min.js"></script>
-  <link rel="stylesheet" href="{{ URL::asset('css/style.css')}}">
-  
-  <body>
-  <div class="navbar navbar-default navbar-static-top" role="navigation">
-    <div class="container">                      
+        <header>
+            <h1>Wizard Demo</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Basic</a></li>
+                    <li><a href="vertical.html">Vertical</a></li>
+                    <li><a href="tabs.html">Tabs</a></li>
+                </ul>
+            </nav>
+        </header>
 
-      <ul class="nav navbar-nav">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li class="dropdown-header">Nav header</li>
-            <li><a href="#">Separated link</a></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul>      
-    </div>
-  </div>
-  <script> 
-jQuery(document).ready(function () {
-  "use strict";
-  var $ = jQuery.noConflict();
-  
-      function showMenu() {
-      $(this).removeClass("drop-collapsed");
-      $(this).addClass("open");
-    }
-    function hideMenu(){
-      $(this).removeClass("open");
-      var $dropdown = $(".dropdown");
+        <div class="content">
+            <h1>Basic Demo</h1>
 
-      $dropdown.each(function () {
-        $(this).addClass("drop-collapsed");
-      });
-    }
-  
-  
-      var $dropdown = $(".dropdown");
+            <script>
+                $(function ()
+                {
+                    $("#wizard").steps({
+                        headerTag: "h2",
+                        bodyTag: "section",
+                        transitionEffect: "slideLeft"
+                    });
+                });
+            </script>
 
-      $dropdown.each(function () {
-        var $this = $(this);
+            <div id="wizard">
+                <h2>First Step</h2>
+                <section>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut nulla nunc. Maecenas arcu sem, hendrerit a tempor quis, 
+                        sagittis accumsan tellus. In hac habitasse platea dictumst. Donec a semper dui. Nunc eget quam libero. Nam at felis metus. 
+                        Nam tellus dolor, tristique ac tempus nec, iaculis quis nisi.</p>
+                </section>
 
-        var $dropmenu = $this.find(".dropdown-menu");
-        $dropmenu.css("height", $dropmenu.outerHeight());
-        $this.addClass("drop-collapsed");
-      });
+                <h2>Second Step</h2>
+                <section>
+                    <p>Donec mi sapien, hendrerit nec egestas a, rutrum vitae dolor. Nullam venenatis diam ac ligula elementum pellentesque. 
+                        In lobortis sollicitudin felis non eleifend. Morbi tristique tellus est, sed tempor elit. Morbi varius, nulla quis condimentum 
+                        dictum, nisi elit condimentum magna, nec venenatis urna quam in nisi. Integer hendrerit sapien a diam adipiscing consectetur. 
+                        In euismod augue ullamcorper leo dignissim quis elementum arcu porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Vestibulum leo velit, blandit ac tempor nec, ultrices id diam. Donec metus lacus, rhoncus sagittis iaculis nec, malesuada a diam. 
+                        Donec non pulvinar urna. Aliquam id velit lacus.</p>
+                </section>
 
+                <h2>Third Step</h2>
+                <section>
+                    <p>Morbi ornare tellus at elit ultrices id dignissim lorem elementum. Sed eget nisl at justo condimentum dapibus. Fusce eros justo, 
+                        pellentesque non euismod ac, rutrum sed quam. Ut non mi tortor. Vestibulum eleifend varius ullamcorper. Aliquam erat volutpat. 
+                        Donec diam massa, porta vel dictum sit amet, iaculis ac massa. Sed elementum dui commodo lectus sollicitudin in auctor mauris 
+                        venenatis.</p>
+                </section>
 
-       // dropdown menu hover intent
-      var hovsettings = {
-          timeout:0,
-          interval: 0,
-          over: showMenu,
-          out: hideMenu
-      };
+                <h2>Forth Step</h2>
+                <section>
+                    <p>Quisque at sem turpis, id sagittis diam. Suspendisse malesuada eros posuere mauris vehicula vulputate. Aliquam sed sem tortor. 
+                        Quisque sed felis ut mauris feugiat iaculis nec ac lectus. Sed consequat vestibulum purus, imperdiet varius est pellentesque vitae. 
+                        Suspendisse consequat cursus eros, vitae tempus enim euismod non. Nullam ut commodo tortor.</p>
+                </section>
+            </div>
+        </div>
 
-      $(".dropdown").hoverIntent(hovsettings);
-  
-  
-  
-});
-</script>
-</body>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    
+    <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
+    </body>
 </html>
