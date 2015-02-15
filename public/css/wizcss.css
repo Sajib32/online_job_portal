@@ -1,0 +1,14 @@
+    .step-title {
+    min-height: 20px;
+    float:left;
+    border-radius: 0;
+    }
+    .next-button, .submit-button, .back-button {
+    float:right;
+    margin:3px;
+    }
+    @media(max-width:600px) {
+    .step-content {
+    margin-top: 10px;
+    }
+    }
