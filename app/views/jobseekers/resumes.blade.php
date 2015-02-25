@@ -1,66 +1,103 @@
-@extends('layouts.main')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bootstrap jQuery Validate form : twitterbootstrap.org</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="{{ URL::asset('css/stylecss.css') }}">
 
+        <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
 
-@section('signup')
-@stop
+        <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
+</head>
+<body>
+<div class="container">
+  <div class="row-fluid">
+    <div class="span12">
+    <h1>Twitter Bootstrap jQuery Validate Registration form</h1>
+    </div>
+  </div>
+  <div class="row-fluid">
+  <div class="span6 offset6">
+    <div id="maincontent" class="span8"> 
+      
+      <form id="registration-form" class="form-horizontal">
+       
+          <h1>Sample Registration form <small>(Fill up the forms to get register)</small></h1>
+          <br/>
+          
+          <div class="form-control-group">
+            <label class="control-label" for="name">Your Name</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" name="name" id="name">
+            </div>
+          </div>
+          
+          <div class="form-control-group">
+            <label class="control-label" for="name">User Name</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" name="username" id="username">
+            </div>
+          </div>
+          
+          <div class="form-control-group">
+            <label class="control-label" for="name">Password</label>
+            <div class="controls">
+              <input type="password" class="input-xlarge" name="password" id="password">
+            </div>
+          </div>
+          
+          <div class="form-control-group">
+            <label class="control-label" for="name"> Retype Password</label>
+            <div class="controls">
+              <input type="password" class="input-xlarge" name="confirm_password" id="confirm_password">
+            </div>
+          </div>
+          
+          <div class="form-control-group">
+            <label class="control-label" for="email">Email Address</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" name="email" id="email">
+            </div>
+          </div>
+          <div class="form-control-group">
+            <label class="control-label" for="message">Your Address</label>
+            <div class="controls">
+              <textarea class="input-xlarge" name="address" id="address" rows="3"></textarea>
+            </div>
+          </div>
+          
+          <div class="form-control-group">
+            <label class="control-label" for="message"> Please agree to our policy</label>
+            <div class="controls">
+             <input id="agree" class="checkbox" type="checkbox" name="agree">
+            </div>
+          </div>
+          
+          <div class="form-actions">
+            <button type="submit" class="btn btn-success btn-large">Register</button>
+            <button type="reset" class="btn">Cancel</button>
+          </div>
+  
+      </form>
+    </div>
+    <!-- .span --> 
+  </div>
+  <!-- .row -->
+  
+</div>
+<!-- .container --> 
+<script src="{{ URL::asset('js/jquery-1.7.1.min.js') }}"></script>
+<script src="{{ URL::asset('js/jquery.validate.js') }}"></script>
 
-@section('menu')
-@stop
+<script src="{{ URL::asset('js/script.js') }}"></script>
 
-@section('nav-tabs')
-	<div class="col-lg-12">
-		<form id="example-advanced-form" action="#">
-    <h3>Account</h3>
-    <fieldset>
-        <legend>Account Information</legend>
- 
-        <label for="userName-2">User name *</label>
-        <input id="userName-2" name="userName" type="text" class="required">
-        <label for="password-2">Password *</label>
-        <input id="password-2" name="password" type="text" class="required">
-        <label for="confirm-2">Confirm Password *</label>
-        <input id="confirm-2" name="confirm" type="text" class="required">
-        <p>(*) Mandatory</p>
-    </fieldset>
- 
-    <h3>Profile</h3>
-    <fieldset>
-        <legend>Profile Information</legend>
- 
-        <label for="name-2">First name *</label>
-        <input id="name-2" name="name" type="text" class="required">
-        <label for="surname-2">Last name *</label>
-        <input id="surname-2" name="surname" type="text" class="required">
-        <label for="email-2">Email *</label>
-        <input id="email-2" name="email" type="text" class="required email">
-        <label for="address-2">Address</label>
-        <input id="address-2" name="address" type="text">
-        <label for="age-2">Age (The warning step will show up if age is less than 18) *</label>
-        <input id="age-2" name="age" type="text" class="required number">
-        <p>(*) Mandatory</p>
-    </fieldset>
- 
-    <h3>Warning</h3>
-    <fieldset>
-        <legend>You are to young</legend>
- 
-        <p>Please go away ;-)</p>
-    </fieldset>
- 
-    <h3>Finish</h3>
-    <fieldset>
-        <legend>Terms and Conditions</legend>
- 
-        <input id="acceptTerms-2" name="acceptTerms" type="checkbox" class="required"> <label for="acceptTerms-2">I agree with the Terms and Conditions.</label>
-    </fieldset>
-</form>
-	</div>
+<script>
+        addEventListener('load', prettyPrint, false);
+        $(document).ready(function(){
+        $('pre').addClass('prettyprint linenums');
+            });
+        </script> 
 
-	<script src="{{ URL::asset('js/form-steps.js') }}"></script>
-@stop
-
-@section('hot-jobs')
-@stop
-
-@section('jobsserial')
-@stop
+</body>
+</html>
