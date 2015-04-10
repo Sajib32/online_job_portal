@@ -149,10 +149,10 @@
             <ul id="myTab" class="nav nav-tabs">
                <li class="active">
                   <a href="#home" data-toggle="tab">
-                     Tutorial Point Home
+                     Functional Category
                   </a>
                </li>
-               <li><a href="#ios" data-toggle="tab">iOS</a></li>
+               <li><a href="#ios" data-toggle="tab">Industrial Category</a></li>
             </ul>
 
             <div id="myTabContent" class="tab-content">

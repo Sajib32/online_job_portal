@@ -30,3 +30,7 @@ Route::get('resumes', function()
 	return View::make('jobseekers.resumes');
 });
 
+Route::get('index1', function()
+{
+	return View::make('jobseekers.index1');
+});

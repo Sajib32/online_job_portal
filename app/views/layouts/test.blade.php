@@ -34,6 +34,7 @@
 </form>
 
             <script type="text/javascript">
+            $(document).ready(function(){
                 $('form').validate({    
     rules: {
         fname: {
@@ -67,6 +68,7 @@
             }
         } 
  });  
+});
             </script>
 
 </body>
